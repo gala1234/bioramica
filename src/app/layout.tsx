@@ -21,6 +21,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Bioramica - Ingeniería Cerámica",
   description: "Datos que certifican la materia. Colección de piezas cerámicas con registro técnico y de mercado.",
+  authors: [ { name: "Galadriel Calero" } ],
   keywords: ["cerámica", "ingeniería", "arte", "escultura", "joyería", "autenticidad"],
 };
 
@@ -31,6 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <meta name="apple-mobile-web-app-title" content="Bioramica" />
       <body className={`${inter.variable} ${playfair.variable} antialiased flex flex-col min-h-screen`}>
         <AppProvider>
             <div className="fixed inset-0 pointer-events-none opacity-[0.03]" 

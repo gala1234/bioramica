@@ -10,7 +10,6 @@ import PieceDetailModal from '@/components/PieceDetailModal';
 const Home = () => {
   return (
     <div className="bg-[#0a0a0a] text-zinc-300 font-sans selection:bg-[#c4a484] selection:text-black overflow-x-hidden">
-      
       <PieceDetailModal />
       <Hero />
       <Gallery />
