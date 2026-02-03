@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 import { Globe, ChevronDown, Check, ShoppingBag } from 'lucide-react';
 import { useAppContext } from '@/context/AppContext';
 import { LANGUAGES } from '@/lib/translations';
@@ -36,23 +37,25 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         <div className="z-50">
-          <h1 className="text-xl font-serif text-white tracking-wide italic">Bioramica</h1>
-          <span className="text-[9px] uppercase tracking-[0.3em] text-[var(--color-brand-primary)] font-bold">
-            {t.nav.brand_sub}
-          </span>
+          <Link href="/">
+            <h1 className="text-xl font-serif text-white tracking-wide italic">Bioramica</h1>
+            <span className="text-[9px] uppercase tracking-[0.3em] text-[var(--color-brand-primary)] font-bold">
+              {t.nav.brand_sub}
+            </span>
+          </Link>
         </div>
 
         <div className="flex items-center gap-6 md:gap-10">
           <div className="hidden md:flex gap-8 text-[10px] uppercase tracking-widest font-medium text-zinc-500">
-            <a href="#coleccion" className="hover:text-white transition-colors">
+            <Link href="/collection" className="hover:text-white transition-colors">
               {t.nav.collection}
-            </a>
-            <a href="#micro" className="hover:text-white transition-colors">
+            </Link>
+            <Link href="/fine-jewelry" className="hover:text-white transition-colors">
               {t.nav.jewelry}
-            </a>
-            <a href="#verificacion" className="hover:text-white transition-colors">
+            </Link>
+            <Link href="/authenticity" className="hover:text-white transition-colors">
               {t.nav.auth}
-            </a>
+            </Link>
           </div>
 
           <div className="flex items-center gap-4 relative z-50">

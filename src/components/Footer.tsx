@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { User, MapPin, FileText } from 'lucide-react';
 import { useAppContext } from '@/context/AppContext';
 
@@ -23,9 +24,9 @@ const Footer = () => {
             </h4>
             <ul className="space-y-4 text-[10px] uppercase tracking-widest text-zinc-400">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link href="/bio" className="hover:text-white transition-colors">
                   Bio
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
@@ -40,9 +41,9 @@ const Footer = () => {
             </h4>
             <ul className="space-y-4 text-[10px] uppercase tracking-widest text-zinc-400">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link href="/workshop" className="hover:text-white transition-colors">
                   Off-Grid Info
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
@@ -57,14 +58,14 @@ const Footer = () => {
             </h4>
             <ul className="space-y-4 text-[10px] uppercase tracking-widest text-zinc-400">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link href="/legal" className="hover:text-white transition-colors">
                   Privacy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link href="/legal" className="hover:text-white transition-colors">
                   Terms
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
