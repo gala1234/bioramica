@@ -3,9 +3,7 @@ import Verification from '@/components/Verification';
 
 const AutenticidadPage = () => {
   return (
-    <main>
-      <Verification />
-    </main>
+    <Verification />
   );
 };
 

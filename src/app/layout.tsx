@@ -31,16 +31,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${inter.variable} ${playfair.variable} antialiased`}>
+      <body className={`${inter.variable} ${playfair.variable} antialiased flex flex-col min-h-screen`}>
         <AppProvider>
             <div className="fixed inset-0 pointer-events-none opacity-[0.03]" 
                 style={{ backgroundImage: `url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAzNHYtNGgtMnY0aC0ydjRoMnY0aDJ2LTRoMnYtNGgtMnpNMzYgMzRWMzZoNHYtMmgtNHptMCAwdjRoMnYtNGgtMnoiIGZpbGw9IiNjNGE0ODQiLz48L2c+PC9zdmc+')` }}
             >
             </div>
             <Navbar />
-                  <CartDrawer />
-            {children}
-      <Footer />
+            <CartDrawer />
+            <main className="flex-grow pt-28">
+              {children}
+            </main>
+            <Footer />
         </AppProvider>
       </body>
     </html>

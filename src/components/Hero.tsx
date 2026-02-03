@@ -8,7 +8,7 @@ const Hero = () => {
   const { t, isRTL } = useAppContext();
 
   return (
-    <section className="relative min-h-[90vh] flex flex-col justify-center px-6 md:px-24 pt-40 border-b border-white/5">
+    <section className="relative min-h-[90vh] flex flex-col justify-center px-6 md:px-24 border-b border-white/5">
       <div className="max-w-5xl relative z-10">
         <motion.span
           initial={{ opacity: 0 }}
