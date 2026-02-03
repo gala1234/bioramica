@@ -22,7 +22,7 @@ const Gallery = () => {
           </p>
         </div>
         <div className="hidden md:block">
-          <span className="text-[10px] text-[#c4a484] uppercase tracking-widest font-bold flex items-center gap-2">
+          <span className="text-[10px] text-[var(--color-brand-primary)] uppercase tracking-widest font-bold flex items-center gap-2">
             <Database size={12} /> {t.gallery.synced}
           </span>
         </div>
@@ -37,7 +37,7 @@ const Gallery = () => {
           >
             <motion.div
               layoutId={`card-image-${piece.id}`}
-              className={`aspect-[3/4] ${piece.imageColor} mb-6 relative overflow-hidden border border-white/5 transition-all duration-500 group-hover:border-[#c4a484]/50 shadow-2xl`}
+              className={`aspect-[3/4] ${piece.imageColor} mb-6 relative overflow-hidden border border-white/5 transition-all duration-500 group-hover:border-[var(--color-brand-primary)]/50 shadow-2xl`}
             >
               <div className="absolute inset-0 flex items-center justify-center opacity-20 group-hover:opacity-100 transition-opacity duration-500">
                 <span className="text-[9px] uppercase tracking-widest text-white border border-white/20 px-3 py-1 bg-black/50 backdrop-blur-sm">
@@ -54,13 +54,13 @@ const Gallery = () => {
               <div
                 className={`absolute bottom-4 ${isRTL ? 'left-4' : 'right-4'}`}
               >
-                <span className="text-sm font-serif italic text-[#c4a484]">
+                <span className="text-sm font-serif italic text-[var(--color-brand-primary)]">
                   €{piece.price.toLocaleString()}
                 </span>
               </div>
             </motion.div>
             <motion.div layoutId={`card-info-${piece.id}`}>
-              <h4 className="text-white font-serif italic text-xl mb-1 group-hover:text-[#c4a484] transition-colors">
+              <h4 className="text-white font-serif italic text-xl mb-1 group-hover:text-[var(--color-brand-primary)] transition-colors">
                 {piece.title}
               </h4>
               <div className="flex justify-between items-center border-t border-white/10 pt-3 mt-3">

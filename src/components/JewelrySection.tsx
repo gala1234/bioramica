@@ -13,7 +13,7 @@ const JewelrySection = () => {
     <section id="micro" className="py-32 px-6 md:px-24 bg-[#0a0a0a] border-t border-white/5">
       <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
         <div>
-          <span className="text-[#c4a484] text-[10px] font-bold uppercase tracking-[0.4em] mb-2 block">
+          <span className="text-[var(--color-brand-primary)] text-[10px] font-bold uppercase tracking-[0.4em] mb-2 block">
             {t.jewelry.label}
           </span>
           <h3 className="text-3xl text-white font-serif italic mb-2">
@@ -34,7 +34,7 @@ const JewelrySection = () => {
           >
             <motion.div
               layoutId={`card-image-${piece.id}`}
-              className={`w-full md:w-1/2 aspect-square ${piece.imageColor} relative overflow-hidden border border-white/5 transition-all duration-500 group-hover:border-[#c4a484]/50 shadow-2xl rounded-sm`}
+              className={`w-full md:w-1/2 aspect-square ${piece.imageColor} relative overflow-hidden border border-white/5 transition-all duration-500 group-hover:border-[var(--color-brand-primary)]/50 shadow-2xl rounded-sm`}
             >
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-black/40">
                 <span className="text-[9px] uppercase tracking-widest text-white border border-white/20 px-3 py-1 bg-black/50 backdrop-blur-sm">
@@ -51,7 +51,7 @@ const JewelrySection = () => {
               <div
                 className={`absolute bottom-4 ${isRTL ? 'left-4' : 'right-4'}`}
               >
-                <span className="text-sm font-serif italic text-[#c4a484]">
+                <span className="text-sm font-serif italic text-[var(--color-brand-primary)]">
                   €{piece.price.toLocaleString()}
                 </span>
               </div>
@@ -61,10 +61,10 @@ const JewelrySection = () => {
               className="w-full md:w-1/2"
             >
               <div className="mb-4">
-                <span className="text-[9px] uppercase tracking-widest text-[#c4a484] mb-1 block">
+                <span className="text-[9px] uppercase tracking-widest text-[var(--color-brand-primary)] mb-1 block">
                   {t.jewelry.label}
                 </span>
-                <h4 className="text-white font-serif italic text-2xl mb-1 group-hover:text-[#c4a484] transition-colors">
+                <h4 className="text-white font-serif italic text-2xl mb-1 group-hover:text-[var(--color-brand-primary)] transition-colors">
                   {piece.title}
                 </h4>
                 <p className="text-[10px] uppercase tracking-widest text-zinc-500">

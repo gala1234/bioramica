@@ -37,7 +37,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         <div className="z-50">
           <h1 className="text-xl font-serif text-white tracking-wide italic">Bioramica</h1>
-          <span className="text-[9px] uppercase tracking-[0.3em] text-[#c4a484] font-bold">
+          <span className="text-[9px] uppercase tracking-[0.3em] text-[var(--color-brand-primary)] font-bold">
             {t.nav.brand_sub}
           </span>
         </div>
@@ -59,7 +59,7 @@ const Navbar = () => {
             <div className="relative">
               <button
                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-                className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-white hover:text-[#c4a484] transition-colors"
+                className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-white hover:text-[var(--color-brand-primary)] transition-colors"
               >
                 <Globe size={12} />
                 <span>{currentLang}</span>
@@ -76,7 +76,7 @@ const Navbar = () => {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 5 }}
-                    className={`absolute mt-4 w-32 bg-[#111] border border-[#c4a484]/30 shadow-2xl py-2 ${
+                    className={`absolute mt-4 w-32 bg-[#111] border border-[var(--color-brand-primary)]/30 shadow-2xl py-2 ${
                       isRTL ? 'left-0' : 'right-0'
                     }`}
                   >
@@ -89,7 +89,7 @@ const Navbar = () => {
                         }}
                         className={`w-full text-left px-4 py-3 text-[9px] uppercase tracking-widest hover:bg-white/5 transition-colors flex justify-between items-center ${
                           currentLang === lang.code
-                            ? 'text-[#c4a484] font-bold'
+                            ? 'text-[var(--color-brand-primary)] font-bold'
                             : 'text-zinc-500'
                         }`}
                       >
@@ -106,11 +106,11 @@ const Navbar = () => {
 
             <button
               onClick={() => setIsCartOpen(true)}
-              className="relative text-white hover:text-[#c4a484] transition-colors"
+              className="relative text-white hover:text-[var(--color-brand-primary)] transition-colors"
             >
               <ShoppingBag size={18} strokeWidth={1.5} />
               {cart.length > 0 && (
-                <span className="absolute -top-1 -right-1 bg-[#c4a484] text-black text-[8px] font-bold w-3 h-3 flex items-center justify-center rounded-full">
+                <span className="absolute -top-1 -right-1 bg-[var(--color-brand-primary)] text-black text-[8px] font-bold w-3 h-3 flex items-center justify-center rounded-full">
                   {cart.length}
                 </span>
               )}

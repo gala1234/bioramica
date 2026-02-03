@@ -18,7 +18,7 @@ const Footer = () => {
             </p>
           </div>
           <div>
-            <h4 className="text-[10px] text-[#c4a484] uppercase font-bold tracking-[0.2em] mb-6 flex items-center gap-2">
+            <h4 className="text-[10px] text-[var(--color-brand-primary)] uppercase font-bold tracking-[0.2em] mb-6 flex items-center gap-2">
               <User size={12} /> {t.footer.col1}
             </h4>
             <ul className="space-y-4 text-[10px] uppercase tracking-widest text-zinc-400">
@@ -35,7 +35,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h4 className="text-[10px] text-[#c4a484] uppercase font-bold tracking-[0.2em] mb-6 flex items-center gap-2">
+            <h4 className="text-[10px] text-[var(--color-brand-primary)] uppercase font-bold tracking-[0.2em] mb-6 flex items-center gap-2">
               <MapPin size={12} /> {t.footer.col2}
             </h4>
             <ul className="space-y-4 text-[10px] uppercase tracking-widest text-zinc-400">
@@ -52,7 +52,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h4 className="text-[10px] text-[#c4a484] uppercase font-bold tracking-[0.2em] mb-6 flex items-center gap-2">
+            <h4 className="text-[10px] text-[var(--color-brand-primary)] uppercase font-bold tracking-[0.2em] mb-6 flex items-center gap-2">
               <FileText size={12} /> {t.footer.col3}
             </h4>
             <ul className="space-y-4 text-[10px] uppercase tracking-widest text-zinc-400">

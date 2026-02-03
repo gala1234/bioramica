@@ -64,7 +64,7 @@ const CartDrawer = () => {
                           <h4 className="text-white font-serif italic text-lg">
                             {item.title}
                           </h4>
-                          <span className="text-[#c4a484] font-mono text-sm">
+                          <span className="text-[var(--color-brand-primary)] font-mono text-sm">
                             €{item.price.toLocaleString()}
                           </span>
                         </div>
@@ -98,7 +98,7 @@ const CartDrawer = () => {
               </div>
               <button
                 disabled={cart.length === 0}
-                className="w-full bg-[#c4a484] text-black py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-[#b08d6a] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-[var(--color-brand-primary)] text-black py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-[var(--color-brand-dark)] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {t.cart.checkout}
               </button>

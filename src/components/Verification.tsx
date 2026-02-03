@@ -35,13 +35,13 @@ const Verification = () => {
       <div
         className="absolute inset-0 opacity-5"
         style={{
-          backgroundImage: `linear-gradient(#c4a484 1px, transparent 0)`,
+          backgroundImage: `linear-gradient(var(--color-brand-primary) 1px, transparent 0)`,
           backgroundSize: '40px 40px',
         }}
       ></div>
       <div className="container mx-auto px-6 relative z-10 max-w-4xl">
         <div className="text-center mb-16">
-          <Lock className="mx-auto text-[#c4a484] mb-4" size={24} />
+          <Lock className="mx-auto text-var(--color-brand-primary) mb-4" size={24} />
           <h3 className="text-3xl text-white font-serif italic mb-4">
             {t.verify.title}
           </h3>
@@ -53,7 +53,7 @@ const Verification = () => {
           {!verificationResult ? (
             <form onSubmit={handleVerify} className="relative group">
               <Search
-                className={`absolute top-1/2 -translate-y-1/2 text-zinc-600 group-focus-within:text-[#c4a484] transition-colors ${
+                className={`absolute top-1/2 -translate-y-1/2 text-zinc-600 group-focus-within:text-var(--color-brand-primary) transition-colors ${
                   isRTL ? 'right-6' : 'left-6'
                 }`}
                 size={18}
@@ -63,13 +63,13 @@ const Verification = () => {
                 value={searchCode}
                 onChange={(e) => setSearchCode(e.target.value)}
                 placeholder={t.verify.placeholder}
-                className={`w-full bg-[#111] border border-zinc-800 text-white py-6 text-sm font-mono tracking-widest focus:outline-none focus:border-[#c4a484] transition-colors text-center uppercase placeholder:text-zinc-700 ${
+                className={`w-full bg-[#111] border border-zinc-800 text-white py-6 text-sm font-mono tracking-widest focus:outline-none focus:border-var(--color-brand-primary) transition-colors text-center uppercase placeholder:text-zinc-700 ${
                   isRTL ? 'pr-16 pl-6' : 'pl-16 pr-6'
                 }`}
               />
               <button
                 disabled={isSearching}
-                className={`absolute top-2 bottom-2 bg-[#c4a484] text-black px-6 text-[10px] font-bold uppercase tracking-widest hover:bg-[#d6b696] transition-colors disabled:opacity-50 ${
+                className={`absolute top-2 bottom-2 bg-var(--color-brand-primary) text-black px-6 text-[10px] font-bold uppercase tracking-widest hover:bg-[#d6b696] transition-colors disabled:opacity-50 ${
                   isRTL ? 'left-2' : 'right-2'
                 }`}
               >
@@ -82,7 +82,7 @@ const Verification = () => {
               animate={{ opacity: 1 }}
               className="text-center py-8"
             >
-              <div className="inline-flex items-center gap-2 text-[#c4a484] border border-[#c4a484] px-4 py-2 text-[10px] font-bold uppercase tracking-widest mb-6">
+              <div className="inline-flex items-center gap-2 text-var(--color-brand-primary) border border-var(--color-brand-primary) px-4 py-2 text-[10px] font-bold uppercase tracking-widest mb-6">
                 <Check size={12} /> {t.verify.success}
               </div>
               <h4 className="text-2xl text-white font-serif italic mb-2">

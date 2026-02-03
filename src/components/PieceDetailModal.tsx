@@ -29,7 +29,7 @@ const PieceDetailModal = () => {
                 e.stopPropagation();
                 setSelectedPiece(null);
               }}
-              className={`absolute top-4 z-50 p-2 bg-black/50 text-white rounded-full hover:bg-[#c4a484] transition-colors border border-white/10 ${
+              className={`absolute top-4 z-50 p-2 bg-black/50 text-white rounded-full hover:bg-[var(--color-brand-primary)] transition-colors border border-white/10 ${
                 isRTL ? 'left-4' : 'right-4'
               }`}
             >
@@ -43,7 +43,7 @@ const PieceDetailModal = () => {
               <div
                 className={`absolute bottom-8 ${isRTL ? 'right-8' : 'left-8'}`}
               >
-                <div className="inline-block px-3 py-1 border border-[#c4a484] text-[#c4a484] text-[9px] font-bold uppercase tracking-widest">
+                <div className="inline-block px-3 py-1 border border-[var(--color-brand-primary)] text-[var(--color-brand-primary)] text-[9px] font-bold uppercase tracking-widest">
                   {selectedPiece.status}
                 </div>
               </div>
@@ -61,11 +61,11 @@ const PieceDetailModal = () => {
                   <h2 className="text-3xl md:text-4xl text-white font-serif italic mb-2">
                     {selectedPiece.title}
                   </h2>
-                  <span className="text-2xl font-serif text-[#c4a484]">
+                  <span className="text-2xl font-serif text-[var(--color-brand-primary)]">
                     €{selectedPiece.price.toLocaleString()}
                   </span>
                 </div>
-                <p className="text-xs uppercase tracking-widest text-[#c4a484]">
+                <p className="text-xs uppercase tracking-widest text-[var(--color-brand-primary)]">
                   {selectedPiece.subtitle}
                 </p>
               </motion.div>
@@ -78,7 +78,7 @@ const PieceDetailModal = () => {
               >
                 <div className="bg-[#161616] p-6 border border-white/5">
                   <div className="flex items-center gap-2 mb-4">
-                    <Scale size={14} className="text-[#c4a484]" />
+                    <Scale size={14} className="text-[var(--color-brand-primary)]" />
                     <h4 className="text-[10px] font-bold uppercase tracking-widest text-white">
                       {t.card.mass_loss}
                     </h4>
@@ -87,16 +87,16 @@ const PieceDetailModal = () => {
                     className="relative h-8 bg-zinc-900 w-full mb-4 flex items-center px-4 border border-zinc-800"
                     dir="ltr"
                   >
-                    <div className="absolute left-0 top-0 bottom-0 bg-[#c4a484]/10 w-full"></div>
+                    <div className="absolute left-0 top-0 bottom-0 bg-[var(--color-brand-primary)]/10 w-full"></div>
                     <div className="absolute top-1/2 left-4 right-4 h-px bg-zinc-700"></div>
                     <div className="absolute left-4 top-1/2 -translate-y-1/2 w-2 h-2 bg-zinc-600 rounded-full"></div>
                     <motion.div
                       initial={{ left: '10%' }}
                       animate={{ left: '80%' }}
                       transition={{ duration: 1.5, ease: 'easeOut' }}
-                      className="absolute top-1/2 -translate-y-1/2 w-2 h-2 bg-[#c4a484] rounded-full z-10 shadow-[0_0_10px_rgba(196,164,132,0.8)]"
+                      className="absolute top-1/2 -translate-y-1/2 w-2 h-2 bg-[var(--color-brand-primary)] rounded-full z-10 shadow-[0_0_10px_rgba(196,164,132,0.8)]"
                     >
-                      <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[9px] font-mono text-[#c4a484]">
+                      <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[9px] font-mono text-[var(--color-brand-primary)]">
                         -{selectedPiece.tech_specs.shrinkage}
                       </div>
                     </motion.div>
@@ -114,14 +114,14 @@ const PieceDetailModal = () => {
                   </div>
                 </div>
 
-                <div className="bg-[#c4a484]/5 p-5 border border-[#c4a484]/20 relative">
+                <div className="bg-[var(--color-brand-primary)]/5 p-5 border border-[var(--color-brand-primary)]/20 relative">
                   <Activity
                     size={14}
-                    className={`absolute top-3 text-[#c4a484] opacity-50 ${
+                    className={`absolute top-3 text-[var(--color-brand-primary)] opacity-50 ${
                       isRTL ? 'left-3' : 'right-3'
                     }`}
                   />
-                  <span className="text-[9px] uppercase text-[#c4a484] font-bold tracking-widest block mb-2">
+                  <span className="text-[9px] uppercase text-[var(--color-brand-primary)] font-bold tracking-widest block mb-2">
                     {t.card.note}
                   </span>
                   <p className="text-xs font-serif italic leading-relaxed text-zinc-400">
@@ -135,7 +135,7 @@ const PieceDetailModal = () => {
                     selectedPiece.status !== t.card.status_avail ||
                     !!cart.find((i) => i.id === selectedPiece.id)
                   }
-                  className="w-full bg-[#c4a484] hover:bg-[#b08d6a] text-black py-4 text-xs font-bold uppercase tracking-[0.2em] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-[var(--color-brand-primary)] hover:bg-[var(--color-brand-dark)] text-black py-4 text-xs font-bold uppercase tracking-[0.2em] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {cart.find((i) => i.id === selectedPiece.id)
                     ? 'Activo en Manifiesto'

@@ -13,7 +13,7 @@ const Hero = () => {
         <motion.span
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="text-[#c4a484] text-[10px] font-bold uppercase tracking-[0.4em] mb-6 block"
+          className="text-[var(--color-brand-primary)] text-[10px] font-bold uppercase tracking-[0.4em] mb-6 block"
         >
           {t.hero.label}
         </motion.span>
@@ -32,8 +32,8 @@ const Hero = () => {
           transition={{ delay: 0.4 }}
           className={`text-sm md:text-base font-light leading-relaxed text-zinc-400 max-w-xl ${
             isRTL
-              ? 'border-r border-[#c4a484] pr-6'
-              : 'border-l border-[#c4a484] pl-6'
+              ? 'border-r border-[var(--color-brand-primary)] pr-6'
+              : 'border-l border-[var(--color-brand-primary)] pl-6'
           }`}
         >
           {t.hero.desc}
