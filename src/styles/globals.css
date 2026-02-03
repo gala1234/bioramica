@@ -1,22 +1,38 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+/* --- 1. THEME CONFIGURATION (Migrated from tailwind.config.ts) --- */
+@theme {
+  /* Fonts: Connected to variables defined in layout.tsx */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+
+  /* Brand Colors */
+  --color-brand-primary: #c4a484;
+  --color-brand-dark: #b08d6a;
+
+  /* Gradients */
+  --image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --image-gradient-conic: conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops));
+}
+
+/* --- 2. BASE STYLES --- */
 body {
   min-height: 100vh;
   background-color: #0a0a0a;
   color: #d4d4d8;
+  font-family: var(--font-sans); /* Applies Inter by default */
   overflow-x: hidden;
 }
 
-.selection\:bg-\[\#c4a484\]::selection {
-  background-color: #c4a484;
-}
-
-.selection\:text-black::selection {
+/* Global text selection (replaces complex utility classes) */
+::selection {
+  background-color: var(--color-brand-primary);
   color: black;
 }
 
+/* --- 3. UTILITIES --- */
+
+/* Custom Scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
   width: 8px;
 }
@@ -33,4 +49,3 @@ body {
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #4a4a4a;
 }
-
