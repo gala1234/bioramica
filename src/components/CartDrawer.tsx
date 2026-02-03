@@ -98,6 +98,7 @@ const CartDrawer = () => {
                 </span>
               </div>
               <Link
+                onClick={() => setIsCartOpen(false)}
                 href="/checkout"
                 className={`w-full bg-[var(--color-brand-primary)] text-black py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-[var(--color-brand-dark)] transition-colors flex items-center justify-center gap-3 ${
                   cart.length === 0 ? 'opacity-50 pointer-events-none' : ''
