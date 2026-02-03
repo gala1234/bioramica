@@ -4,6 +4,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ShoppingBag, Trash2 } from 'lucide-react';
 import { useAppContext } from '@/context/AppContext';
+import Link from 'next/link';
 
 const CartDrawer = () => {
   const {
@@ -96,12 +97,14 @@ const CartDrawer = () => {
                   €{cartTotal.toLocaleString()}
                 </span>
               </div>
-              <button
-                disabled={cart.length === 0}
-                className="w-full bg-[var(--color-brand-primary)] text-black py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-[var(--color-brand-dark)] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              <Link
+                href="/checkout"
+                className={`w-full bg-[var(--color-brand-primary)] text-black py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-[var(--color-brand-dark)] transition-colors flex items-center justify-center gap-3 ${
+                  cart.length === 0 ? 'opacity-50 pointer-events-none' : ''
+                }`}
               >
                 {t.cart.checkout}
-              </button>
+              </Link>
             </div>
           </motion.div>
         </>
