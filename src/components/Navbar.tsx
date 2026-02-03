@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import BioramicaLogo from './Logo';
 import { Globe, ChevronDown, Check, ShoppingBag } from 'lucide-react';
 import { useAppContext } from '@/context/AppContext';
 import { LANGUAGES } from '@/lib/translations';
@@ -37,11 +38,14 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         <div className="z-50">
-          <Link href="/">
-            <h1 className="text-xl font-serif text-white tracking-wide italic">Bioramica</h1>
-            <span className="text-[9px] uppercase tracking-[0.3em] text-[var(--color-brand-primary)] font-bold">
-              {t.nav.brand_sub}
-            </span>
+          <Link href="/" className="flex items-center gap-3">
+            <BioramicaLogo className="w-10 h-10 text-[var(--color-brand-primary)]" />
+            <div>
+              <h1 className="text-xl font-serif text-white tracking-wide italic">Bioramica</h1>
+              <span className="text-[9px] uppercase tracking-[0.3em] text-[var(--color-brand-primary)] font-bold">
+                {t.nav.brand_sub}
+              </span>
+            </div>
           </Link>
         </div>
 

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import BioramicaLogo from './Logo';
 import { User, MapPin, FileText } from 'lucide-react';
 import { useAppContext } from '@/context/AppContext';
 
@@ -13,7 +14,10 @@ const Footer = () => {
       <div className="container mx-auto px-6 md:px-24">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-1">
-            <h2 className="text-2xl text-white font-serif italic mb-6">Bioramica</h2>
+            <div className="flex items-center gap-3 mb-6">
+                <BioramicaLogo className="w-8 h-8 text-white" />
+            <h2 className="text-2xl text-white font-serif italic">Bioramica</h2>
+              </div>
             <p className="text-[10px] text-zinc-500 uppercase tracking-widest leading-loose whitespace-pre-line">
               {t.footer.text}
             </p>
