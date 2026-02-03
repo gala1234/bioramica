@@ -2,8 +2,9 @@
 
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Scale, Activity } from 'lucide-react';
+import { X, Scale, Activity, ArrowRight } from 'lucide-react';
 import { useAppContext } from '@/context/AppContext';
+import Link from 'next/link';
 
 const PieceDetailModal = () => {
   const { t, selectedPiece, setSelectedPiece, addToCart, cart, isRTL } = useAppContext();
@@ -68,6 +69,13 @@ const PieceDetailModal = () => {
                 <p className="text-xs uppercase tracking-widest text-[var(--color-brand-primary)]">
                   {selectedPiece.subtitle}
                 </p>
+                <Link
+                  href={`/asset/${selectedPiece.id}`}
+                  onClick={() => setSelectedPiece(null)}
+                  className="inline-flex items-center gap-1 text-[9px] uppercase tracking-widest text-zinc-500 hover:text-[#c4a484] transition-colors mt-4 border-b border-transparent hover:border-[#c4a484]/50 pb-0.5"
+                >
+                  Ver Ficha Técnica Completa <ArrowRight size={10} />
+                </Link>
               </motion.div>
 
               <motion.div
