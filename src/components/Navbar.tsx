@@ -56,13 +56,13 @@ const Navbar = () => {
 
           {/* --- DESKTOP MENU (Center) --- */}
           <div className="hidden md:flex gap-8 text-[10px] uppercase tracking-widest font-medium text-zinc-500 absolute left-1/2 -translate-x-1/2">
-            <Link href="/coleccion" className="hover:text-white transition-colors">
+            <Link href="/collection" className="hover:text-white transition-colors">
               {t.nav.collection}
             </Link>
-            <Link href="/alta-joyeria" className="hover:text-white transition-colors">
+            <Link href="/fine-jewelry" className="hover:text-white transition-colors">
               {t.nav.jewelry}
             </Link>
-            <Link href="/autenticidad" className="hover:text-white transition-colors">
+            <Link href="/authenticity" className="hover:text-white transition-colors">
               {t.nav.auth}
             </Link>
           </div>
@@ -159,8 +159,8 @@ const Navbar = () => {
             <div className="flex-grow flex flex-col justify-center px-8 gap-8">
               {[
                 { href: '/collection', label: t.nav.collection },
-                { href: '/alta-joyeria', label: t.nav.jewelry },
-                { href: '/autenticidad', label: t.nav.auth },
+                { href: '/fine-jewelry', label: t.nav.jewelry },
+                { href: '/authenticity', label: t.nav.auth },
               ].map((link, i) => (
                 <motion.div
                   key={link.href}
