@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ShoppingBag, Trash2 } from 'lucide-react';
+import { X, ShoppingBag, Trash2, ArrowRight } from 'lucide-react';
 import { useAppContext } from '@/context/AppContext';
 import Link from 'next/link';
 
@@ -75,6 +75,13 @@ const CartDrawer = () => {
                         <p className="text-[9px] font-mono text-zinc-600 mb-2">
                           {item.id}
                         </p>
+                        <Link 
+                          href={`/asset/${item.id}`}
+                          onClick={() => setIsCartOpen(false)}
+                          className="inline-flex items-center gap-1 text-[9px] uppercase tracking-widest text-zinc-500 hover:text-[#c4a484] transition-colors mb-3 border-b border-transparent hover:border-[#c4a484]/50 pb-0.5"
+                        >
+                          Ver Ficha Técnica <ArrowRight size={10} />
+                        </Link>
                         <button
                           onClick={() => removeFromCart(item.id)}
                           className="text-[9px] uppercase tracking-widest text-red-900 hover:text-red-500 transition-colors flex items-center gap-1"
